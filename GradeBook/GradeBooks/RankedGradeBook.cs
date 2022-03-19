@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace GradeBook.GradeBooks
 {
-    class RankedGradeBook : BaseGradeBook
+    public class RankedGradeBook : BaseGradeBook
     {
         public RankedGradeBook(string name) : base(name)
         {
@@ -37,7 +37,7 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5)
             {
-                Console.WriteLine("Ranked granding requires atleast 5 stundets.");
+                Console.WriteLine("Ranked grading requires at least 5 students.");
                 return;
             }
 
@@ -49,13 +49,16 @@ namespace GradeBook.GradeBooks
         {
             if (Students.Count < 5)
             {
-                Console.WriteLine("Ranked granding requires atleast 5 stundets.");
+                Console.WriteLine("Ranked grading requires at least 5 students.");
                 return;
             }
 
-            base.CalculateStatistics();
+            base.CalculateStudentStatistics(name);
 
+            
         }
+        
+
 
 
 
